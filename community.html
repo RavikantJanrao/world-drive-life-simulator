@@ -1,0 +1,8 @@
+
+<h2>Community</h2>
+<div id="c"></div>
+<script>
+fetch("/api/community").then(r=>r.json()).then(d=>{
+ c.innerHTML=d.map(x=>"<p>"+x.text+"</p>").join("");
+});
+</script>

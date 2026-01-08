@@ -1,0 +1,10 @@
+
+<h2>Garage</h2>
+<button onclick="select(1)">Hatchback</button>
+<button onclick="select(2)">Sedan</button>
+<script>
+function select(id){
+ localStorage.setItem("car",id);
+ location.href="drive.html";
+}
+</script>

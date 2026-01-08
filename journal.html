@@ -1,0 +1,13 @@
+
+<textarea id="t"></textarea>
+<button onclick="save()">Save</button>
+<script>
+async function save(){
+ await fetch("/api/journal",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({user:"Driver",text:t.value,km:120})
+ });
+ alert("Saved");
+}
+</script>
